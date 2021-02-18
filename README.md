@@ -19,7 +19,7 @@ Full requirements are available at [REQUIREMENTS.md](REQUIREMENTS.md).
 ## What's left to implement
 
 1. Paging.
-2. Base cuirrency selection.
+2. Base currency selection.
 3. Min/max/average rate.
 4. History of currency rate.
 5. History chart.
