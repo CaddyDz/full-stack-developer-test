@@ -9,6 +9,7 @@ Full requirements are available at [REQUIREMENTS.md](REQUIREMENTS.md).
 1. Create fork of this repository (private).
 2. Implement missing functionality (check "what's left to implement" section).
 3. Commit your changes.
+4. Create pull request to original repository.
 
 ## What's implemented
 
