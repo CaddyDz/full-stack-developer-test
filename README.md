@@ -24,7 +24,11 @@ Full requirements are available at [REQUIREMENTS.md](REQUIREMENTS.md).
 3. Min/max/average rate.
 4. History of currency rate.
 5. History chart.
-6. Unit tests
+6. Unit tests.
+
+## Constraints
+
+Implementing functionality with native Laravel/Vue instruments will be valued greater than using 3rd-party packages (paging, charts, etc.).
 
 ## Installation
 
