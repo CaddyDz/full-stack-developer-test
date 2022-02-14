@@ -5,17 +5,20 @@
         <div class="card">
           <div class="card-header">Currencies</div>
           <div class="card-body">
-            <div class="dropdown" v-if="currencies">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Base Currency
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <button class="dropdown-item" v-for="currency in currencies" :key="currency.id"
-                        @click="changeBaseCurrency(currency.id)">
-                        {{ currency.name }}
+          <!-- Controls -->
+            <form class="form-inline pb-4">
+                <div class="dropdown pr-2" v-if="currencies">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="baseCurrency" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Base Currency
                     </button>
+                    <div class="dropdown-menu" aria-labelledby="baseCurrency">
+                        <button class="dropdown-item" v-for="currency in currencies" :key="currency.id" @click="changeBaseCurrency(currency.id)">
+                            {{ currency.name }}
+                        </button>
+                    </div>
                 </div>
-            </div>
+                <input type="number" class="form-control" placeholder="Page Size" aria-label="Page Size">
+            </form>
             <table class="table table-bordered">
               <thead>
                 <tr>

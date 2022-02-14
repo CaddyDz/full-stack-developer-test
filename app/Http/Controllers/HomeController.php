@@ -23,4 +23,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+	/**
+     * Show the history page for a currency.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function history()
+    {
+        return view('history');
+    }
 }
