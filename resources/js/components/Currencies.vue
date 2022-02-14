@@ -12,7 +12,7 @@
                         Base Currency
                     </button>
                     <div class="dropdown-menu" aria-labelledby="baseCurrency">
-                        <button class="dropdown-item" v-for="currency in currencies" :key="currency.id" @click="changeBaseCurrency(currency.id)">
+                        <button class="dropdown-item" v-for="currency in currencies" :key="currency.id" @click="changeBaseCurrency($event, currency.id)">
                             {{ currency.name }}
                         </button>
                     </div>
@@ -72,10 +72,14 @@ export default {
   }),
 
   methods: {
-      changeBaseCurrency(currency) {
+      changeBaseCurrency($event, currency) {
+          $event.preventDefault();
           axios.get(`/api/currency?base_currency_id=${currency}`)
             .then((response) => {
                 this.currencies = response.data.currencies;
+                this.average_rate = response.data.average_rate
+                this.minimum_rate = response.data.minimum_rate
+                this.maximum_rate = response.data.maximum_rate
             });
       }
   },
