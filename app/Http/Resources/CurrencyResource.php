@@ -6,11 +6,10 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class CurrencyResource extends JsonResource
 {
-    public function toArray($request)
+    public function toArray($request): array
     {
         return [
             'id' => $this->id,
-            'char_code' => $this->char_code,
             'nominal' => $this->nominal,
             'name' => $this->name,
             'rate' => $this->rate,
