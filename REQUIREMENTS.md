@@ -45,9 +45,9 @@ Response:
 Input parameters (all except `id` are optional):
 * id: ID of the currency to return
 * page: Page to return.
-* page_size: Number of currencies per page.
+* page_size: Number of days per page.
 * date_from/date_to: Date region to return history for.
-* base_currency_id: ID of the currency to return rates for (extra calculations required).
+* base_currency_id: ID of the currency to return rates based on (extra calculations required).
 
 Response:
 * An array of daily historical data. One record per day with:
