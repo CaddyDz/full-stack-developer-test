@@ -17,7 +17,7 @@
                         </button>
                     </div>
                 </div>
-                <input type="number" class="form-control" placeholder="Page Size" aria-label="Page Size">
+                <input type="number" class="form-control" placeholder="Page Size" aria-label="Page Size" @change="setPageSize">
             </form>
             <table class="table table-bordered">
               <thead>
@@ -75,6 +75,16 @@ export default {
       changeBaseCurrency($event, currency) {
           $event.preventDefault();
           axios.get(`/api/currency?base_currency_id=${currency}`)
+            .then((response) => {
+                this.currencies = response.data.currencies;
+                this.average_rate = response.data.average_rate
+                this.minimum_rate = response.data.minimum_rate
+                this.maximum_rate = response.data.maximum_rate
+            });
+      },
+      changeBaseCurrency($event, size) {
+          $event.preventDefault();
+          axios.get(`/api/currency?base_currency_id=${size}`)
             .then((response) => {
                 this.currencies = response.data.currencies;
                 this.average_rate = response.data.average_rate
